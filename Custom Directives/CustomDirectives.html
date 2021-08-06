@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="angular.js"></script>
+    <title>Custom Header and Footer</title>
+    <style>
+        siddhesh-header {
+            padding-right: 20px;
+        }
+    </style>
+</head>
+
+<body ng-app="myApp">
+    <siddhesh-header></siddhesh-header>
+    <siddhesh-footer></siddhesh-footer>
+    <script>
+        var app = angular.module("myApp", []);
+        app.directive("siddheshHeader", function () {
+            return {
+                template: "<div class='card'><h5 class='card-header'>Header Created By Siddhesh Yellaram</h5></div>"
+            }
+        })
+        app.directive("siddheshFooter", function () {
+            return {
+                template: "<div class='card' style='margin-top: 619px'><h5 class='card-footer'>Footer Created By Siddhesh Yellaram</div>"
+            }
+        })
+    </script>
+</body>
+
+</html>
